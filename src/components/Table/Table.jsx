@@ -34,7 +34,7 @@ const TableData = () => {
                   filteredItem.slice(0, 10).map((item, index, arr)=> {
                     const {SKU, Image_1, Description, Title, Name, Brand, Quantity, size, ['Cost Price']: costPrice } = item
                     return(
-                      <tr key={index} className={`w-full leading-4 border-b-2 sm:text-xs text-[10px] ${index === arr.length - 1 ? 'border-b-0' : ''}`}>
+                      <tr key={index} className={`w-full leading-4 border-b-2 sm:text-xs text-[10px] ${index === arr.length - 1 ? 'border-none' : ''}`}>
                         <td className={`py-3 px-5 ${index === 0 ? 'rounded-tl-xl' : ''} ${index === arr.length - 1 ? 'rounded-bl-xl' : ''}`}><input type="checkbox" checked={selectedItem.includes(SKU)} onChange={() => handleCheckBox(SKU)} className='accent-blue-600'/></td>
                         <td className={`py-3 px-5`}>{index + 1}.</td>
                         <td className=' sm:w-[40px] sm:h-[40px] py-3 px-5'><img src={Image_1} alt="" /></td>
